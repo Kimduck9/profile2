@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+html, body{
+    width: 100%; height: 100%;
+    background: var(--mainBG)
+}
+
+.inner{
+    width: 1180px;  height: inherit;
+    margin: 120px auto;
+}
+
+/* 프로필 리모컨 */
+.header{
+    width: 270px;  height: auto; border-radius: 30px;
+    background-color: var(--active);
+    float: left;
+    padding: 24px;
+    position: fixed; z-index: 999;
+    
+}
+.nav ul{cursor: default;}
+.nav ul li.young{color: var(--black10);}
+.nav ul li.young b{font-size: 32px;}
+.nav ul li.young p{color: var(--black30); font-size: 14px; margin-bottom: 30px;}
+
+.nav ul li.menu{margin-bottom: 20px; padding-left: 4px; transition: all 0.3s;}
+.nav ul li.menu::before{
+    content: "\f08d";
+    font: var(--fa-font-solid);/*ver6*/
+    color: var(--point1);
+    font-size: 1.2em;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+.nav ul li.menu:hover{font-weight: 600;}
+
+
+/* 메인 프로필 */
+.main > section{
+    width: 870px; height: inherit; border-radius: 30px;
+    background-color: var(--white);
+    float: right;
+    box-shadow: 0px 6px 10px var(--active);
+    margin-bottom: 70px;
+    padding: 48px;
+    cursor: default;
+}
+.main > section > .title{font-size: 20px; font-weight: 600; margin-bottom: 40px;}
+.main > section > .title .bar{width: 28px; height: 4px; background-color: var(--point1); border-radius: 10px;}
+
+#introduce{background-color: var(--active);}
+#introduce .pc_tit{font-size: 48px; font-weight: 700; margin-bottom: 40px; }
+#introduce > p{line-height: 1.6; color: var(--black20);}
+#introduce > p em{display: block;}
+
+
+/* about */
+#about .ab_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    word-break: keep-all; /* 줄바꿈 시 단어 유지!!!! */
+}
+#about .ab_inner > p img{width: 85%;}
+#about .ab_inner .in_txt{width: 100%;}
+#about .ab_inner .in_txt > h3{font-weight: 700; margin-bottom: 12px;}
+#about .ab_inner .in_txt > p{margin-bottom: 20px; line-height: 1.6;}
+#about .ab_inner .in_txt details{margin-bottom: 20px; border-bottom: 1px solid var(--black300);}
+#about .ab_inner .in_txt details summary{
+    margin-bottom: 10px;
+    color: var(--point1); font-weight: 600; font-size: 15px;
+    cursor: pointer;
+}
+#about .ab_inner .in_txt details .sogae_tit{font-weight: 600; font-size: 18px; margin-bottom: 8px;}
+#about .ab_inner .in_txt details .sogae_text{font-size: 15px; line-height: 1.6; color: var(--black30); margin-bottom: 32px;}
+#about .ab_inner .in_txt details b{color: var(--point1); font-weight: 600; font-size: 18px; margin-bottom: 8px; display: block;}
+
+#about .ab_inner .in_txt .info ul li{font-weight: 600; margin-bottom: 10px;}
+#about .ab_inner .in_txt .info ul li:last-child{margin-bottom: 0;}
+
+
+/* ex + aw */
+#ex .ex_inner{position: relative; padding: 80px 0px 20px 0px;}
+#ex.aw .ex_inner{position: relative; padding: 50px 0px 20px 0px;}
+#ex .ex_inner > article{display: flex; margin-bottom: 40px;}
+#ex.aw .ex_inner > article{margin-bottom: 20px;}
+#ex .ex_inner > article:last-child{margin-bottom: 0;}
+#ex .ex_inner > article > .date{
+    min-width: 170px;
+    color: var(--black30);
+    margin-right: 30px;
+    position: relative;
+}
+#ex .ex_inner > article > .date::before{
+    content: "";
+    width: 16px; height: 16px; background-color: var(--white);
+    border: 1px solid var(--point2); border-radius: 50%;
+    position: absolute; top: 4px; right: 0;  z-index: 1;
+}
+#ex .ex_inner > article > .date.now::after{
+    content: "";
+    width: 8px; height: 8px; background-color: var(--point2);
+    border: 1px solid var(--point2); border-radius: 50%;
+    position: absolute;  top: 8px; right: 4px;  z-index: 2;
+}
+#ex .ex_inner > article .ex_TXT h4{word-break: break-all;}
+#ex .ex_inner > article .ex_TXT > p{
+    font-size: 14px; color: var(--black500);
+    line-height: 1.8;
+    margin-top: 8px;
+    word-break: keep-all;
+}
+#ex .ex_inner .ex_bar{
+    position: absolute; top: 12px; bottom: 0; left: 161px;
+    width: 1px;
+    border-right: 2px solid var(--point2);
+} 
+#ex .ex_inner .ex_bar::before{
+    content: "";
+    width: 8px; height: 8px;
+    background-color: var(--point2); border-radius: 50%;
+    position: absolute; top: 0; left: -3px;  z-index: 1;
+}
+#ex .ex_inner .ex_bar::after{
+    content: "";
+    width: 8px; height: 8px;
+    background-color: var(--point2); border-radius: 50%;
+    position: absolute; bottom: 0; left: -3px;  z-index: 1;
+}
+
+
+/* port_web */
+.port .title p{
+    font-weight: 400; font-size: 14px; margin-bottom: 2px;
+    line-height: 1.8; color: var(--black30);
+}
+.port .title p em{font-weight: 600;}
+#port_web .web_inner > article{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    margin-bottom: 80px;
+}
+#port_web .web_inner > article:last-child{margin-bottom: 0;}
+#port_web .web_inner > article.team{margin-bottom: 100px;}
+#port_web .web_inner > article .w_tit{
+    position: relative; z-index: 10;
+    width: 350px; height: 350px;
+    padding: 11px 11px 166px 10px;
+    background: url(../img/desktop.png) no-repeat;
+    background-size: 100%;
+}
+#port_web .web_inner > article .w_tit a{
+    display: block;
+    position: relative; width: 100%; height: 100%;
+    overflow: hidden;
+    background-position: 0 0;
+    background-size: cover;
+    transition: all 6s;
+}
+#port_web .web_inner > article .w_tit a:hover{background-position: 0 100%;}
+
+#port_web .web_inner > article .w_text{width: 380px;}
+#port_web .web_inner > article .w_text b{font-size: 24px; line-height: 1.8;}
+#port_web .web_inner > article .w_text .uu1{font-size: 15px; line-height: 1.8; display: flex; gap: 0 8px; margin-bottom: 8px;}
+#port_web .web_inner > article .w_text .uu1:last-child{margin-bottom: 0;}
+#port_web .web_inner > article .w_text .uu1 li em{
+    padding: 3px 10px;
+    background-color: var(--active);
+    border-radius: 10px;
+}
+#port_web .web_inner > article .w_text .uu1 li.tool,
+#port_web .web_inner > article .w_text .uu1 li.page{position: relative;}
+#port_web .web_inner > article .w_text .uu1 li.tool > ul{position: absolute; left: 75px; top: 0;}
+#port_web .web_inner > article .w_text .uu1 li.page{margin-bottom: 70px;}
+#port_web .web_inner > article .w_text .uu1 li.page > ul{position: absolute; left: 75px; top: 0; width: 150px;}
+#port_web .web_inner > article .w_text .uu1 li.tool > ul li,
+#port_web .web_inner > article .w_text .uu1 li.page > ul li{line-height: 1.5;}
+
+#port_web .web_inner > article .w_text details{padding: 150px 0px 0px 10px; word-break: keep-all;}
+#port_web .web_inner > article:nth-of-type(3) .w_text details{padding: 100px 0px 0px 10px;}
+#port_web .web_inner > article .w_text details summary{
+    font-weight: 600; font-size: 15px; cursor: pointer;
+    color: var(--black20); text-shadow: 0px 2px 1px var(--active);
+    transition: all 0.3s;
+}
+#port_web .web_inner > article .w_text details summary:hover{text-shadow: 0px 1px 1px var(--active_on);}
+#port_web .web_inner > article .w_text details .sogae{padding-left: 20px; color: var(--black20);}
+#port_web .web_inner > article .w_text details .sogae .myself1{font-weight: 600; font-size: 32px;}
+
+#port_web .web_inner > article .sg1 .myself1{text-shadow: 0px 1px 2px var(--port01_C);}
+#port_web .web_inner > article .sg2 .myself1{text-shadow: 0px 1px 2px var(--port02_C);}
+#port_web .web_inner > article .sg3 .myself1{text-shadow: 0px 1px 2px var(--port03_C);}
+    
+#port_web .web_inner > article .w_text details .sogae .myself2{margin-bottom: 4px; font-size: 18px; font-weight: 500;}
+#port_web .web_inner > article .w_text details .sogae .myself3{line-height: 1.4; font-size: 14px;}
+#port_web .web_inner > article .w_text details .sogae .myself3 em{font-weight: 500;}
+
+
+/* port_etc */
+#port_etc .etc_inner{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+#port_etc .etc_inner a{width: calc((100% - 24px) / 2);}
+#port_etc .etc_inner .etc_wrap{
+    width: 100%; height: 160px;
+    padding-top: 36px;
+    border: 1px solid var(--black40); border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    line-height: 1.8
+}
+#port_etc .etc_inner .etc_wrap span{display: block;}
+#port_etc .etc_inner .etc_wrap em{font-weight: 600; font-size: 16px; color: var(--black20);}
+#port_etc .etc_inner .etc_wrap p{font-weight: 300; font-size: 14px; color: var(--black30);}
+#port_etc .etc_inner .etc_wrap:hover{background-color: var(--active);}
+#port_etc .etc_inner .etc_wrap:hover span{color: var(--point1);}
+
+
+/* fix */
+#fix{position: fixed; bottom: 20px; right: 24px; z-index: 999; cursor: pointer;}
+#fix p{
+    position: relative; width: 40px; height: 45px;
+    background-color: var(--active); border-radius: 10px;
+}
+#fix p::before{
+    content: "↑";
+    position: absolute; right: 50%; bottom: 0; transform: translateX(50%);
+    color: var(--point1);
+    font-weight: bold; font-size: 30px;
+}
