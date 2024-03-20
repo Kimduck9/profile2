@@ -52,7 +52,6 @@ html, body{
 #introduce{background-color: var(--active);}
 #introduce .pc_tit{font-size: 48px; font-weight: 700; margin-bottom: 40px; }
 #introduce > p{line-height: 1.6; color: var(--black20);}
-#introduce > p em{display: block;}
 
 
 /* about */
